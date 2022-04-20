@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane id="root" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1156.0" stylesheets="@total-customers-by-type-report.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appointment.controller.TotalCustomersTypeReportController">
+   <children>
+      <HBox layoutX="8.0" layoutY="47.0" prefHeight="45.0" prefWidth="1145.0" spacing="55.0">
+         <children>
+            <RadioButton id="viewCustomersRadioButton" fx:id="customersRadioButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeReportsCustomerScheduleScene" prefHeight="35.0" prefWidth="190.0" text="%contactScheduleRadioButton">
+               <toggleGroup>
+                  <ToggleGroup fx:id="reportsToggleGroup" />
+               </toggleGroup></RadioButton>
+            <RadioButton id="viewByWeekRadioButton" fx:id="totalCustomersTypeRadioButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="285.0" selected="true" text="%totalCustomersTypeRadioButton" toggleGroup="$reportsToggleGroup" />
+            <RadioButton id="viewByMonthRadioButton" fx:id="totalCustomersMonthRadioButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeTotalCustomersMonthReportsScene" prefHeight="35.0" prefWidth="265.0" text="%totalCustomersMonthRadioButton" toggleGroup="$reportsToggleGroup" />
+            <RadioButton id="viewAllRadioButton" fx:id="totalCustomersCountryRadioButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeTotalCustomersCountryReportsScene" prefHeight="35.0" prefWidth="237.0" text="%totalCustomersCountryRadioButton" toggleGroup="$reportsToggleGroup">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox layoutX="162.0" layoutY="618.0" prefHeight="28.0" prefWidth="975.0" spacing="100.0">
+         <children>
+            <Button id="modifyAppointmentButton" fx:id="cancelButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeSceneToMainController" prefHeight="25.0" prefWidth="165.0" text="%cancelButton" />
+            <Button id="logoutButton" fx:id="logoutButton" mnemonicParsing="false" onAction="#changeSceneToLoginController" prefHeight="26.0" prefWidth="134.0" text="%logoutButton" />
+         </children>
+         <padding>
+            <Insets left="230.0" />
+         </padding>
+      </HBox>
+      <Pane layoutX="162.0" layoutY="92.0" prefHeight="35.0" prefWidth="833.0">
+         <children>
+            <Label id="appointmentScheduleLabel" fx:id="appointmentTypeTextLabel" layoutX="198.0" prefHeight="35.0" prefWidth="70.0" text="%appointmentTypeTextLabel" />
+            <ComboBox fx:id="appointmentTypeComboBox" editable="true" layoutX="268.0" layoutY="5.0" onAction="#setCustomerTableView" prefHeight="25.0" prefWidth="220.0" />
+            <Label fx:id="totalCustomersLabel" layoutX="506.0" layoutY="10.0" prefHeight="17.0" prefWidth="327.0" text="%totalCustomersLabel" />
+         </children>
+      </Pane>
+      <Pane id="appointmentPane" layoutY="144.0" prefHeight="435.0" prefWidth="1156.0">
+         <children>
+            <TableView id="customerTableView" fx:id="customerTableView" layoutX="4.0" layoutY="-6.0" prefHeight="441.0" prefWidth="1150.0">
+               <columns>
+                  <TableColumn fx:id="customerIdColumn" prefWidth="75.0" text="%customerIdLabel" />
+                  <TableColumn fx:id="customerNameColumn" prefWidth="123.0" text="%customerNameLabel" />
+                  <TableColumn fx:id="customerAddressColumn" prefWidth="101.0" text="%customerAddressLabel" />
+                  <TableColumn fx:id="customerPostalCodeColumn" prefWidth="75.0" text="%customerPostalCode" />
+                  <TableColumn fx:id="customerPhoneColumn" prefWidth="156.0" text="%customerPhoneLabel" />
+                  <TableColumn fx:id="customerCreatedDateColumn" prefWidth="102.0" text="%modifyCustomerCreatedDateColumn" />
+                  <TableColumn fx:id="customerCreatedByColumn" prefWidth="85.0" text="%modifyCustomerCreatedByColumn" />
+                  <TableColumn fx:id="customerLastUpdateColumn" prefWidth="146.0" text="%modifyCustomerLastUpdateDateColumn" />
+                  <TableColumn fx:id="customerLastUpdatedByColumn" minWidth="0.0" prefWidth="162.0" text="%modifyCustomerLastUpdatedByColumn" />
+                  <TableColumn fx:id="customerDivisionColumn" minWidth="0.0" prefWidth="124.0" text="%modifyCustomerDivisionColumn" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</Pane>

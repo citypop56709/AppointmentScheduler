@@ -1,0 +1,16 @@
+Apr 19, 2022 1:19:53 AM com.example.appointment.ConnectionModel establishConnection
+INFO: Access approved.test.2022-04-19 01:19:53.Asia/Beirut
+Apr 19, 2022 1:23:09 AM com.example.appointment.ConnectionModel establishConnection
+INFO: Access approved.test.2022-04-19 01:23:09.Asia/Beirut
+Apr 19, 2022 3:12:57 AM com.example.appointment.ConnectionModel establishConnection
+INFO: Access approved.test.2022-04-19 03:12:57.Asia/Beirut
+Apr 19, 2022 3:37:30 AM com.example.appointment.ConnectionModel establishConnection
+INFO: Access approved.test.2022-04-19 03:37:30.Asia/Beirut
+Apr 19, 2022 3:39:19 AM com.example.appointment.ConnectionModel establishConnection
+INFO: Access approved.test.2022-04-19 03:39:19.Asia/Beirut
+Apr 19, 2022 3:42:46 AM com.example.appointment.ConnectionModel establishConnection
+INFO: Access approved.test.2022-04-19 03:42:46.Asia/Beirut
+Apr 19, 2022 3:44:31 AM com.example.appointment.ConnectionModel establishConnection
+INFO: Access approved.test.2022-04-19 03:44:31.Asia/Beirut
+Apr 18, 2022 8:08:45 PM com.example.appointment.ConnectionModel establishConnection
+INFO: Access approved.test.2022-04-18 20:08:45.America/Chicago

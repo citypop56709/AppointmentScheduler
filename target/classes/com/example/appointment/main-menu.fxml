@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane id="root" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1156.0" stylesheets="@main-menu.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appointment.controller.MainController">
+   <children>
+      <Pane id="menuPane" fx:id="appointmentPane" layoutX="5.0" layoutY="5.0" prefHeight="74.0" prefWidth="1150.0">
+         <children>
+            <HBox layoutX="11.0" layoutY="18.0" prefHeight="38.0" prefWidth="1129.0" spacing="10.0">
+               <children>
+                  <Label id="appointmentScheduleLabel" fx:id="appointmentScheduleLabel" prefHeight="38.0" prefWidth="230.0" text="%appointmentScheduleLabel" />
+                  <RadioButton id="viewCustomersRadioButton" fx:id="viewCustomersRadioButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeSceneToViewCustomersController" prefHeight="35.0" prefWidth="170.0" text="%viewCustomersRadioButton">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="appointmentViewToggleGroup" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton id="viewByWeekRadioButton" fx:id="viewByWeekRadioButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeViewByWeek" prefHeight="35.0" prefWidth="170.0" text="%viewByWeekRadioButton" toggleGroup="$appointmentViewToggleGroup" />
+                  <RadioButton id="viewByMonthRadioButton" fx:id="viewByMonthRadioButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeViewByMonth" prefHeight="35.0" prefWidth="170.0" text="%viewByMonthRadioButton" toggleGroup="$appointmentViewToggleGroup" />
+                  <RadioButton id="viewAllRadioButton" fx:id="viewAllRadioButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeViewAll" prefHeight="35.0" prefWidth="135.0" selected="true" text="%viewAllRadioButton" toggleGroup="$appointmentViewToggleGroup" />
+                  <DatePicker fx:id="appointmentDatePicker" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#changeViewByDay" prefHeight="26.0" prefWidth="231.0" />
+               </children>
+            </HBox>
+            <Label id="yourTimeZoneLabel" fx:id="yourTimeZoneLabel" layoutX="910.0" layoutY="44.0" prefHeight="25.0" prefWidth="230.0" text="%yourTimeZoneLabel" />
+         </children>
+      </Pane>
+      <Pane id="appointmentPane" layoutX="-1.0" layoutY="88.0" prefHeight="435.0" prefWidth="1156.0">
+         <children>
+            <TableView id="appointmentTableView" fx:id="appointmentTableView" layoutX="4.0" layoutY="-6.0" prefHeight="441.0" prefWidth="1150.0">
+              <columns>
+                <TableColumn fx:id="appointmentIdColumn" prefWidth="61.0" text="%appointmentIdColumn" />
+                  <TableColumn fx:id="appointmentTitleColumn" minWidth="0.0" prefWidth="78.0" text="%appointmentTitleColumn" />
+                  <TableColumn fx:id="appointmentDescriptionColumn" prefWidth="114.0" text="%appointmentDescriptionColumn" />
+                  <TableColumn fx:id="appointmentLocationColumn" prefWidth="124.0" text="%appointmentLocationColumn" />
+                <TableColumn fx:id="contactInfoColumn" prefWidth="95.0" text="%contactInfoColumn" />
+                  <TableColumn fx:id="appointmentTypeColumn" prefWidth="91.0" text="%appointmentTypeColumn" />
+                  <TableColumn fx:id="appointmentStartTimeColumn" minWidth="0.0" prefWidth="110.0" text="%appointmentStartTimeColumn" />
+                  <TableColumn fx:id="appointmentEndTimeColumn" prefWidth="88.0" text="%appointmentEndTimeColumn" />
+                  <TableColumn fx:id="startDateColumn" minWidth="5.0" prefWidth="112.0" text="%startDateColumn" />
+                  <TableColumn fx:id="endDateColumn" minWidth="0.0" prefWidth="82.0" text="%endDateColumn" />
+                  <TableColumn fx:id="customerIdColumn" minWidth="0.0" prefWidth="93.0" text="%customerIdColumn" />
+                  <TableColumn fx:id="userIdColumn" minWidth="0.0" prefWidth="107.0" text="%userIdColumn" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane id="buttonsPane" fx:id="menuPane" layoutX="8.0" layoutY="523.0" prefHeight="51.0" prefWidth="1140.0">
+         <children>
+            <HBox layoutX="4.0" layoutY="12.0" prefHeight="28.0" prefWidth="1129.0" spacing="100.0">
+               <children>
+                  <Button id="reportsButton" fx:id="reportsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeReportsScene" prefHeight="25.0" prefWidth="106.0" text="%reportsButton" />
+                  <Button id="addAppointmentButton" fx:id="addAppointmentButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeAddAppointmentScene" prefHeight="25.0" prefWidth="165.0" text="%addAppointmentButton" />
+                  <Button id="modifyAppointmentButton" fx:id="modifyAppointmentButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeModifyAppointmentScene" prefHeight="25.0" prefWidth="165.0" text="%modifyAppointmentButton" />
+                  <Button id="modifyAppointmentButton" fx:id="deleteAppointmentButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteAppointment" prefHeight="25.0" prefWidth="165.0" text="%deleteAppointmentButton" />
+                  <Button id="logoutButton" fx:id="logoutButton" mnemonicParsing="false" onAction="#changeSceneToLoginController" prefHeight="26.0" prefWidth="134.0" text="%logoutButton" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</Pane>

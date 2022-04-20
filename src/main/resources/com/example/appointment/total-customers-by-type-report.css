@@ -1,0 +1,18 @@
+.root{
+    -fx-background-color: rgba(255, 213, 0, 0.07);
+}
+
+.combo-box{
+    -fx-border-color: rgba(0, 128, 255, 0.13);
+    -fx-border-width: 2px;
+}
+
+.table-view{
+    -fx-background-color: rgba(0, 128, 255, 0.13);
+}
+
+.table-cell{
+    -fx-border-color: rgba(0, 128, 255, 0.13);
+    -fx-background-color: rgba(0, 128, 255, 0.13);
+    -fx-alignment: center;
+}

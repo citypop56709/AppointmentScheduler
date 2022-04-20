@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane id="root" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1156.0" stylesheets="@view-customers.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appointment.controller.ViewCustomersController">
+   <children>
+      <Pane id="menuPane" fx:id="appointmentPane" layoutX="5.0" layoutY="5.0" prefHeight="74.0" prefWidth="1156.0">
+         <children>
+            <HBox layoutX="14.0" layoutY="18.0" prefHeight="38.0" prefWidth="1129.0" spacing="10.0">
+               <children>
+                  <Label id="appointmentScheduleLabel" fx:id="appointmentScheduleLabel" prefHeight="38.0" prefWidth="230.0" text="%appointmentScheduleLabel" />
+                  <RadioButton id="viewCustomersRadioButton" fx:id="viewCustomersRadioButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" selected="true" text="%viewCustomersRadioButton">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="appointmentViewToggleGroup" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton id="viewByWeekRadioButton" fx:id="viewByWeekRadioButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeSceneToMainControllerViewByWeek" prefHeight="35.0" prefWidth="170.0" text="%viewByWeekRadioButton" toggleGroup="$appointmentViewToggleGroup" />
+                  <RadioButton id="viewByMonthRadioButton" fx:id="viewByMonthRadioButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeSceneToMainControllerViewByMonth" prefHeight="35.0" prefWidth="170.0" text="%viewByMonthRadioButton" toggleGroup="$appointmentViewToggleGroup" />
+                  <RadioButton id="viewAllRadioButton" fx:id="viewAllRadioButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeSceneToMainController" prefHeight="35.0" prefWidth="135.0" text="%viewAllRadioButton" toggleGroup="$appointmentViewToggleGroup" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane id="appointmentPane" layoutX="-1.0" layoutY="88.0" prefHeight="435.0" prefWidth="1156.0">
+         <children>
+            <TableView id="customerTableView" fx:id="customerTableView" layoutX="4.0" layoutY="-6.0" prefHeight="441.0" prefWidth="1150.0">
+              <columns>
+                <TableColumn fx:id="customerIdColumn" prefWidth="75.0" text="%customerIdLabel" />
+                  <TableColumn fx:id="customerNameColumn" prefWidth="95.0" text="%customerNameLabel" />
+                  <TableColumn fx:id="customerAddressColumn" prefWidth="133.0" text="%customerAddressLabel" />
+                  <TableColumn fx:id="customerPostalCodeColumn" prefWidth="71.0" text="%customerPostalCode" />
+                <TableColumn fx:id="customerPhoneColumn" prefWidth="149.0" text="%customerPhoneLabel" />
+                  <TableColumn fx:id="customerCreatedDateColumn" prefWidth="103.0" text="%modifyCustomerCreatedDateColumn" />
+                  <TableColumn fx:id="customerCreatedByColumn" prefWidth="81.0" text="%modifyCustomerCreatedByColumn" />
+                  <TableColumn fx:id="customerLastUpdateColumn" prefWidth="156.0" text="%modifyCustomerLastUpdateDateColumn" />
+                  <TableColumn fx:id="customerLastUpdatedByColumn" minWidth="0.0" prefWidth="152.0" text="%modifyCustomerLastUpdatedByColumn" />
+                  <TableColumn fx:id="customerDivisionColumn" minWidth="0.0" prefWidth="134.0" text="%modifyCustomerDivisionColumn" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane id="buttonsPane" fx:id="menuPane" layoutX="8.0" layoutY="523.0" prefHeight="51.0" prefWidth="1140.0">
+         <children>
+            <HBox layoutX="4.0" layoutY="12.0" prefHeight="29.0" prefWidth="1129.0" spacing="100.0">
+               <children>
+                  <Button id="reportsButton" fx:id="reportsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeReportsScene" prefHeight="25.0" prefWidth="106.0" text="%reportsButton" />
+                  <Button id="addCustomerButton" fx:id="addCustomerButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeAddCustomerScene" prefHeight="25.0" prefWidth="165.0" text="%addCustomerButton" />
+                  <Button id="modifyCustomerButton" fx:id="modifyCustomerButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeModifyCustomerScene" prefHeight="25.0" prefWidth="165.0" text="%modifyCustomerButton" />
+                  <Button id="modifyCustomerButton" fx:id="deleteCustomerButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="25.0" prefWidth="165.0" text="%deleteCustomerButton" />
+                  <Button id="logoutButton" fx:id="logoutButton" mnemonicParsing="false" onAction="#changeSceneToLoginController" prefHeight="26.0" prefWidth="134.0" text="%logoutButton" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</Pane>
