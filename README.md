@@ -36,3 +36,5 @@ You can run the exe in the applications main folder, or run the jar. Make sure t
 
 Additional Report From A3f:
 For an additional report I did a page that displayed the customers by country. This way if you have a great number of more customers in one country vs. another you can allocate your resources appropriately.
+
+More details are available at my video: <a href='https://www.youtube.com/watch?v=zJrFXg5N2UY&t=4s'>here</a>
